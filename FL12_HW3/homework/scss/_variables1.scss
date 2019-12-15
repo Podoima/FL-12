@@ -1,0 +1,25 @@
+$colors: (
+    bg: #fff,
+    darkText: #2c2f3c,
+    blue: #14a0c7,
+    green: #699900,
+    darkGrey: #21232e,
+    bannerGreen: #65950b,
+    bannerBlue: #315fc9
+);
+
+$contentBackground: map-get($colors, bg);
+
+$headerBackgroundImg: url(../img/m-h-day.jpg);
+$headerBG: $headerBackgroundImg;
+
+$headerColor: map-get($colors, darkText);
+
+$bgText: map-get($colors, blue);
+
+$buttonBG: map-get($colors, green);
+
+$cardBG: map-get($colors, darkGrey);
+
+$bannerFirstColor: map-get($colors, bannerGreen);
+$bannerSecondColor: map-get($colors, bannerBlue);

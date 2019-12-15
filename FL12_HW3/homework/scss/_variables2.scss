@@ -1,0 +1,26 @@
+$colors: (
+    bg: #21232e,
+    white: #fff,
+    orange: #ff4e33,
+    yellow: #e3ac00,
+    darkGrey: #3b3f50,
+    bannerOrange: #e1a902,
+    bannerPurple: #98354c
+);
+
+$contentBackground: map-get($colors, bg);
+
+$headerBackgroundImg: url(../img/m-h-night.jpg);
+$headerBG: $headerBackgroundImg;
+
+$headerColor: map-get($colors, white);
+
+$bgText: map-get($colors, orange);
+
+$buttonBG: map-get($colors, yellow);
+
+$cardBG: map-get($colors, darkGrey);
+
+$bannerFirstColor: map-get($colors, bannerOrange);
+$bannerSecondColor: map-get($colors, bannerPurple);
+
