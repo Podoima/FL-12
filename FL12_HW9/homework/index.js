@@ -3,7 +3,6 @@ function convert(...args) {
     for (let item of args) {
         typeof item === 'string' ? arr.push(parseInt(item)) : arr.push(item + '');
     }
-    console.log(arr);
     return arr;
 }
 
