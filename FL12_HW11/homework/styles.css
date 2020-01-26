@@ -1,0 +1,38 @@
+body {
+    font-size: 1.1em;
+}
+ul {
+    list-style-type: none;
+}
+.file, 
+.empty_folder_description, 
+.folder > .folder {
+    display: none;
+}
+.opened_folder > .folder, 
+.opened_folder > .file, 
+.opened_folder > .empty_folder_description {
+    display: block;
+}
+span {
+    display: flex;
+    align-items: center;
+}
+.folder_title, .file {
+    cursor: pointer;
+}
+.folder_title:hover, .file:hover {
+    background: #f2f2f2;
+}
+.empty_folder_description {
+    font-style: italic;
+}
+.material-icons {
+    font-size: 1.1em;
+}
+.folder_title .material-icons {
+    color: #fc0;
+}
+.file .material-icons {
+    color: #ccc;
+}
