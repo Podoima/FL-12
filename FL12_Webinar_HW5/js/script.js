@@ -134,8 +134,8 @@ function saveUserChanges(id) {
 	showSpinner();
 	let user = {};
 	user.id = id;
-	const button = document.getElementById(`${id}`);
-	const nodes = button.parentElement.childNodes;
+	const div = document.getElementById(`${id}`);
+	const nodes = div.childNodes;
 
 	makeObject(user, nodes);
 	sendData(user);
