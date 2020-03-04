@@ -1,6 +1,5 @@
 let url = 'https://jsonplaceholder.typicode.com';
 
-
 function showSpinner() {
 	const spinner = document.getElementById('spinner');
 	spinner.style.display = 'flex';
@@ -11,18 +10,12 @@ function hideSpinner() {
 	spinner.style.display = 'none';
 }
 
-function getData(url) {
-	showSpinner();
-	let xhr = new XMLHttpRequest();
-	xhr.open('GET', url, false);
-	let data;
-	xhr.onload = function() {
-  		data = xhr.response;
-	}
-	xhr.send(null);
-	return JSON.parse(data);
+function loadData(url) {
+	fetch(`${url}/users`)
+        .then(response => response.json())
+        .then(data => showData(data))
+        .catch(error => console.log(error));
 }
-
 
 function showData(array) {
 	const rootNode = document.getElementById('root');
@@ -32,7 +25,7 @@ function showData(array) {
 	const span = 'span';
 	const input = 'input';
 	const button = 'button';
-	
+
 	for (let user of array) {
 		
 		const wrapper = document.createElement(ul);
@@ -146,8 +139,8 @@ function saveUserChanges(id) {
 function deleteUser(id) {
 	showSpinner();
 	fetch(`${url}/users/${id}`, {method: 'DELETE'});
+	updatePage();
 	hideSpinner();
 }
 
-let data = getData(`${url}/users`);
-showData(data);
+loadData(url);
